@@ -5,9 +5,14 @@
 
 Após instalar os requisitos acima também será necessário instalar:
 - A extensão [Neo Blockchain Toolkit](https://marketplace.visualstudio.com/items?itemName=ngd-seattle.neo-blockchain-toolkit) para o VS Code;
-- [DotNet](https://dotnet.microsoft.com/en-us/download) versão 5 ou mais atualizada;
+- [DotNet(x64) e AspNet(x64)](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) versão 5 ou mais atualizada;
+  - Verifique se foi instalado corretamente digitando o comando no terminal:
+    ```sh 
+    dotnet --version
+    ```
+  - Caso de erro, consulte [esse forum](https://www.appeon.com/developers/get-help/knowledgebase/it-was-not-possible-find-any-installed-net-core-sdks.html#:~:text=NET%20Core%20SDKs%E2%80%9D%20error.&text=Follow%20the%20steps%20below%20to,screenshot%20below%20as%20an%20example)
 - O package [neo3-boa](https://github.com/CityOfZion/neo3-boa) no Python:
-    - Abrir o terminal no diretório do projeto (No Powershell nem sempre roda);
+    - Abrir o terminal no diretório do projeto que será criado(No Powershell nem sempre roda);
     - Use no terminal:
         - Para criar um ambiente virtual para python:
             ```sh
@@ -48,6 +53,7 @@ Acima dos métodos existe o decorator `@public` que indica que o método pode se
 > Os imports relacionados a blockchain começarão com o caminho `boa3.builtin`.
 
 ### Funções
+As funções abaixo são as mesmas do passo anterior, porém com o código para interagir com a blockchain, você pode sobre-escrever elas ou adicione a parte do código faltando.
 
 #### _deploy
 Neste método, quando o contrato for divulgado na blockchain, a string `Hello World` será armazenada na chave `memória`.
@@ -108,6 +114,7 @@ Neste tópico iremos ensinar como criar uma rede privada. Tendo a extensão da N
 
 ![Sidebar VSCode](/POC/doc-images/sidebar-vscode.png "Sidebar VSCode")
 - Abra a aba `QUICK START`;
+![QUICK START](/POC/doc-images/start-blockchain.png "QUICK START")
 - Clique no botão `Create a new Neo Express Instance` e selecione a opção de 1 nó;
   - Caso não apareça o botão, clique na reticências da aba `BLOCKCHAINS` e clique no botão `Create private blockchain`;
 - Abrirá uma janela de salvar arquivos, salve-o e a rede irá iniciar automaticamente;
@@ -160,7 +167,7 @@ Para usar o contrato é preciso "invocar" ele. Para isso, na aba `QUICK START`:
 - Escolha de que modo chamará o contrato:
   - CalledByEntry: Esse modo é para escrita e possui custo ao ser usado, essa opção serve para assinar apenas a primeira chamada ao contrato;
   - Global: Esse modo é para escrita e possui custo ao ser usado, ao contrario do CalledByEntry, se outro contrato for chamado durante a invocação, a assinatura será usada novamente;
-  - None: Esse modo é só para leitura da blockchain e não possui custo ao ser usado.
+  - None: Esse modo é só para leitura da blockchain e não possui custo ao ser usado. 
 
 Espere um pouco e pronto! Você usou o contrato que você publicou! Irá aparecer uma janela de histórico de usos da blockchain, é possivel clicar em cada uso e ver as informações que ele carrega.
 
