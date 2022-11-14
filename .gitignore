@@ -1,1 +1,7 @@
 **/venv/
+**.idea/
+**.neo-express
+**.nef
+**.manifest.json
+**.neo-wallet.json
+**.neo-invoke.json
