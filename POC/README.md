@@ -1,4 +1,4 @@
-# POC - Smart Contract na N3
+# POC - Smart Contract na Neo 3 (N3)
 ## Requisitos
 - [Visual Studio Code](https://code.visualstudio.com/);
 - [Python](https://www.python.org/downloads/) 3.7 ou uma versão mais atual.
@@ -77,7 +77,7 @@ def get_information() -> str:
 
 
 ### Compilação
-Antes de publicar o **Smart Contract** é preciso compilar ele. Caso você tenha instalado o package do neo3-boa na venv é necessário que ela esteja ativa Os arquivos que são importados para os contratos não precisam ser compilados, apenas o contrato em si. Para compilar o contrato use o comando abaixo no terminal:
+Antes de publicar o **Smart Contract** é preciso compilar ele. Caso você tenha instalado o package do neo3-boa na venv é necessário que ela esteja ativa. Os arquivos que são importados para os contratos não precisam ser compilados, apenas o contrato em si. Para compilar o contrato use o comando abaixo no terminal:
 ```sh
 neo3-boa <nome-do-arquivo>.py
 ```
@@ -112,7 +112,7 @@ Neste tópico iremos ensinar como criar uma rede privada. Tendo a extensão da N
   - Caso não apareça o botão, clique na reticências da aba `BLOCKCHAINS` e clique no botão `Create private blockchain`;
 - Abrirá uma janela de salvar arquivos, salve-o e a rede irá iniciar automaticamente;
 
-Caso queira desligar a rede, procure na aba `BLOCKCHAINS` a rede terminada com `.neo-express`, clique com o botão direito e clique em `Stop blockchain`. Para iniciar novamente, clique no botão `Start Neo Express` localizado na aba `QUICK START` ou procure na aba `BLOCKCHAIN` a rede terminada com `.neo-express`, clique com o botão direito e clique em `Start blockchain`.
+Caso queira desligar a rede, procure na aba `BLOCKCHAINS` a rede terminada com `.neo-express`, clique com o botão direito e clique em `Stop blockchain`. Para iniciar novamente, clique no botão `Start Neo Express` localizado na aba `QUICK START` ou procure na aba `BLOCKCHAINS` a rede terminada com `.neo-express`, clique com o botão direito e clique em `Start blockchain`.
 
 ### Criando uma conta e recebendo fundos:
 Para criar um contrato, antes é necessário criar uma wallet (carteira digital). A blockchain da Neo usa primariamente 2 tipos de tokens, o NEO e o GAS. Para cada método que modifica algo na blockchain da Neo é cobrado uma taxa em GAS.
@@ -125,10 +125,10 @@ Para criar um contrato, antes é necessário criar uma wallet (carteira digital)
 Para dar fundos a uma carteira na rede privada, na aba `BLOCKCHAINS`:
 - Clique com o botão direito na rede terminada com `.neo-express`;
 - Clique em `Transfer assets`;
-- Selecione o token;
-- Digite um valor para transferir;
-- Selecione a carteira de quem será enviado;
-- Selecione a carteira de quem irá receber.
+- Selecione o token, ex: GAS;
+- Digite um valor para transferir, ex: 100;
+- Selecione a carteira de quem será enviado, ex: genesis;
+- Selecione a carteira de quem irá receber, ex: sua carteira.
 
 #### Rede TestNet e/ou MainNet
 
@@ -166,4 +166,6 @@ Espere um pouco e pronto! Você usou o contrato que você publicou! Irá aparece
 
 ![Exemplo Info Chamada](/POC/doc-images/exemplo-info-chamada.png "Exemplo Info Chamada")
 
-Os métodos dos contratos que são publicados na TestNet e/ou MainNet podem ser conferidos por indexadores de blocos, como o [Neo Dora](https://dora.coz.io/contracts)
+Os métodos dos contratos que são publicados na TestNet e/ou MainNet podem ser conferidos por indexadores de blocos, como o [Neo Dora](https://dora.coz.io/contracts).
+
+Agora deixe sua imaginação fluir e desenvolva o contrato do seu jeito!
