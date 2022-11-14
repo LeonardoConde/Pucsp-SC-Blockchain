@@ -156,4 +156,8 @@ Para usar o contrato é preciso "invocar" ele. Para isso, na aba `QUICK START`:
   - Global: Esse modo é para escrita e possui custo ao ser usado, ao contrario do CalledByEntry, se outro contrato for chamado durante a invocação, a assinatura será usada novamente;
   - None: Esse modo é só para leitura da blockchain e não possui custo ao ser usado.
 
-Espere um pouco e pronto! Você usou contrato que você publicou! Irá aparecer uma janela de histórico de usos da blockchain, é possivel clicar em cada uso e ver as informações que ele carrega.
+Espere um pouco e pronto! Você usou o contrato que você publicou! Irá aparecer uma janela de histórico de usos da blockchain, é possivel clicar em cada uso e ver as informações que ele carrega.
+
+![Exemplo Info Chamada](/POC/doc-images/exemplo-info-chamada.png "Exemplo Info Chamada")
+
+Os métodos dos contratos que são publicados na TestNet e/ou MainNet podem ser conferidos por indexadores de blocos, como o [Neo Dora](https://dora.coz.io/contracts)
