@@ -1,12 +1,13 @@
 # POC - Smart Contract na N3
 ## Requisitos
-- Visual Studio Code;
-- Python 3.7 ou uma versão mais atual.
+- [Visual Studio Code](https://code.visualstudio.com/);
+- [Python](https://www.python.org/downloads/) 3.7 ou uma versão mais atual.
 
 Após instalar os requisitos acima também será necessário instalar:
 - A extensão [Neo Blockchain Toolkit](https://marketplace.visualstudio.com/items?itemName=ngd-seattle.neo-blockchain-toolkit) para o VS Code;
-- O package [neo3-boa](https://github.com/CityOfZion/neo3-boa#quickstart) no Python:
-    - Abrir o terminal;
+- [DotNet](https://dotnet.microsoft.com/en-us/download) versão 5 ou mais atualizada;
+- O package [neo3-boa](https://github.com/CityOfZion/neo3-boa) no Python:
+    - Abrir o terminal no diretório do projeto (No Powershell nem sempre roda);
     - Use no terminal:
         - Para criar um ambiente virtual para python:
             ```sh
@@ -33,11 +34,11 @@ def _deploy(data: Any, is_updating: bool):
     pass
     
 @public
-def set_information(info: string):
+def set_information(info: str):
     pass
     
 @public
-def get_information() -> string:
+def get_information() -> str:
     pass
 ```
 Serão usados apenas esses três metódos neste contrato, o método `_deploy` será executado quando o contrato for publicado na blockchain, os outros dois serão usados para ler uma informação que está guardada na blockchain e a para modificar essa informação.
@@ -76,7 +77,7 @@ def get_information() -> str:
 
 
 ### Compilação
-Antes de publicar o **Smart Contract** é preciso compilar ele. Os arquivos que são importados para os contratos não precisam ser compilados, apenas o contrato em si. Para compilar o contrato use o comando abaixo no terminal:
+Antes de publicar o **Smart Contract** é preciso compilar ele. Caso você tenha instalado o package do neo3-boa na venv é necessário que ela esteja ativa Os arquivos que são importados para os contratos não precisam ser compilados, apenas o contrato em si. Para compilar o contrato use o comando abaixo no terminal:
 ```sh
 neo3-boa <nome-do-arquivo>.py
 ```
@@ -84,6 +85,8 @@ Caso o arquivo não esteja no mesmo diretório que o terminal, é possivel compi
 ```sh
 neo3-boa <caminho-do-arquivo>.py
 ```
+![Compilação](/POC/doc-images/exemplo-de-compilacao.png "Compilação")
+
 Após executado, 2 arquivos com o mesmo nome do arquivo serão gerados, um com extensão ``.manifest.json`` e o outro com ``.nef``. O arquivo de extensão ``.manifest.json`` é o arquivo que que contém as informações do contrato e as assinaturas dos métodos públicos do contrato compilado, enquanto o de extensão ``.nef`` é o arquivo do contrato em bytes. Caso precise recompilar, não há necessidade de apagá-los, o compilador já sobrescreve os arquivos.
 
 ### Tipos de rede
