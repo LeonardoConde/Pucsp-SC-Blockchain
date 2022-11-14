@@ -136,7 +136,7 @@ Existem várias wallets compatíveis com a blockchain da Neo 3, nós recomendamo
 
 ### Publicando o contrato
 Nesse tutorial iremos publicar apenas na rede privada por questões de tempo. Então tendo compilado o contrato, transfira da carteira genesis (o primeiro nó da blockchain) 100 GAS para a carteira que você criou. Após isso na aba `QUICK START`:
-- Clique no botão `Invoke a contract`;
+- Clique no botão `Deploy a contract`;
 - Selecione a carteira na qual quer atrelar ao contrato;
 - Selecione o arquivo de extensão `.nef` do contrato;
 Pronto, seu contrato está publicado na rede local.
@@ -150,7 +150,10 @@ Para usar o contrato é preciso "invocar" ele. Para isso, na aba `QUICK START`:
 - Selecione o contrato o seu contrato;
 - Digite no campo `Operation` o nome do método a ser usado;
 - Inclua os parâmetros, caso tenha, na seção `Arguments`, caso sua função tenha mais de um parâmetro, de um clique na janela aberta e irá aparecer um novo campo para adicionar o próximo argumento;
-![Exemplo Chamada](/POC/doc-images/exemplo-chamada-de-metodo.png "Exemplo Chamada")
+
+![Exemplo Chamada Get](/POC/doc-images/exemplo-chamada-de-metodo-get.png "Exemplo Chamada Get")
+
+![Exemplo Chamada Set](/POC/doc-images/exemplo-chamada-de-metodo.png "Exemplo Chamada Set")
 
 - Clique em `Run this step`;
 - Escolha a wallet que usará o contrato;
